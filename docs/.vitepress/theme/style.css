@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+	--font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	--font-head: 'Montserrat', 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+html, body, .vitepress, #app {
+	font-family: var(--font-sans);
+	font-size: 16px;
+	color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6,
+.vp-docs-home .hero h1,
+.vp-home .hero h1,
+.theme-default .hero h1,
+.hero h1 {
+	font-family: var(--font-head) !important;
+	font-weight: 600;
+	color: #000000 !important; 
+}
+
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6,
+.vp-theme-dark h1,
+.vp-theme-dark h2,
+.vp-theme-dark h3,
+.vp-theme-dark h4,
+.vp-theme-dark h5,
+.vp-theme-dark h6,
+.vp-docs-home .hero h1,
+.vp-home .hero h1,
+.theme-default .hero h1,
+.hero h1 {
+	color: #5d07f2 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+	h1, h2, h3, h4, h5, h6 {
+		color: #5d07f2 !important;
+	}
+}
+
+
+
