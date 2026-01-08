@@ -5,23 +5,6 @@
 	--font-head: 'Montserrat', 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
-html, body, .vitepress, #app {
-	font-family: var(--font-sans);
-	font-size: 16px;
-	color: inherit;
-}
-
-h1, h2, h3, h4, h5, h6,
-.vp-docs-home .hero h1,
-.vp-home .hero h1,
-.theme-default .hero h1,
-.hero h1 {
-	font-family: var(--font-head) !important;
-	font-weight: 600;
-	color: #000000 !important; 
-}
-
-
 html[data-theme="dark"] h1,
 html[data-theme="dark"] h2,
 html[data-theme="dark"] h3,
@@ -38,12 +21,12 @@ html[data-theme="dark"] h6,
 .vp-home .hero h1,
 .theme-default .hero h1,
 .hero h1 {
-	color: #5d07f2 !important;
+	color: #f7a305 !important;
 }
 
 @media (prefers-color-scheme: dark) {
 	h1, h2, h3, h4, h5, h6 {
-		color: #5d07f2 !important;
+		color: #f7a305 !important;
 	}
 }
 

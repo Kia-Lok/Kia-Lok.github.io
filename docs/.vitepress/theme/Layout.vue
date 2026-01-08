@@ -2,10 +2,11 @@
 import DefaultTheme from 'vitepress/theme'
 import mediumZoom from 'medium-zoom'
 import { onMounted } from 'vue'
-import { useRouter } from 'vitepress'
+import { useRouter, useData } from 'vitepress'
 
 const { Layout } = DefaultTheme
 const router = useRouter()
+const { frontmatter } = useData()
 
 const setupZoom = () => {
   mediumZoom('[data-zoomable]', {
@@ -22,20 +23,24 @@ router.onAfterRouteChange = () => setupZoom()
 <template>
   <Layout>
     <template #doc-before>
-      <h1 v-if="$frontmatter.title" id="title">
-        {{ $frontmatter.title }}
+      <h1 v-if="frontmatter.title" class="doc-title">
+        {{ frontmatter.title }}
       </h1>
     </template>
   </Layout>
 </template>
 
-<style>
-.medium-zoom-overlay {
-  backdrop-filter: blur(6px);
+<style scoped>
+.doc-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
-.medium-zoom-overlay,
-.medium-zoom-image--opened {
-  z-index: 999;
+@media (max-width: 768px) {
+  .doc-title {
+    font-size: 2rem;
+  }
 }
 </style>
